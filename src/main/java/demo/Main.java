@@ -5,8 +5,7 @@ public class Main {
         System.out.println("Demo SpotBugs CI running...");
 
         String role = getUserRole();
-        // BUG CỐ TÌNH: dùng '==' thay vì .equals()
-        if (role == "admin") {
+        if ("admin".equals(role)) {
             System.out.println("Full access granted");
         } else {
             System.out.println("Limited access");
@@ -14,6 +13,6 @@ public class Main {
     }
 
     public static String getUserRole() {
-        return new String("admin");
+        return "admin";
     }
 }
