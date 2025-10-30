@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         String role = getUserRole();
 
-        if (role == "admin") {
+        if ("admin".equals(role)) {
             System.out.println("Full access granted");
         } else {
             System.out.println("Limited access");
@@ -12,6 +12,6 @@ public class Main {
     }
 
     public static String getUserRole() {
-        return new String("admin");
+        return "admin";
     }
 }
